@@ -2,9 +2,20 @@ body {
   background: slategray;
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
-}
-.container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.container {
+  width: 350px;
+}
+.form-group {
+  display: flex;
+}
+input {
+  width: 95%;
+}
+button {
+  background: darkslategray;
+  color: #fff;
 }

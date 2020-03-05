@@ -11,9 +11,19 @@
 <body>
   <div class="container">
     <?php
-    $x = "Hello world!";
-    echo ($x);
+    $blog = $_POST['statusUpdate'];
     ?>
+    <form action="index.php" method="post">
+      <label for="statusUpdate">What's on your mind?</label>
+      <div class="form-group">
+        <input type="text" name="statusUpdate"><button>post</button>
+      </div>
+    </form>
+    <section>
+      <?php
+      echo $blog
+      ?>
+    </section>
   </div>
 </body>
 
