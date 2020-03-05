@@ -8,7 +8,7 @@
     if (!$connection) {
       die("Connection failed: " . mysqli_connect_error());
     } else {
-      echo ('Connection successful!');
+      echo ('Connection successful! ');
     }
     $sql = "INSERT INTO MicroBlog (post) VALUES ('".$blog."')";
     if ($connection->query($sql) === TRUE) {

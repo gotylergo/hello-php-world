@@ -11,14 +11,25 @@
 <body>
   <div class="container">
     <form action="post.php" method="post">
-      <label for="statusUpdate">What's on your mind?</label>
       <div class="form-group">
-        <input type="text" name="statusUpdate"><button>post</button>
+        <input type="text" name="statusUpdate" placeholder="What's on your mind?"><button>post</button>
       </div>
     </form>
     <section>
       <?php
-      // echo $blog
+      $DBserver = 'localhost';
+      $DBUser = 'root';
+      $DBPass = 'root';
+      $DBName = 'hellophpworld';
+      $connection = mysqli_connect($DBServer, $DBUser, $DBPass, $DBName);
+      if (!$connection) {
+        die("Connection failed: " . mysqli_connect_error());
+      } 
+      $results = $connection->query("SELECT post FROM MicroBlog");
+      foreach ($results as $row){
+              echo "<div class='micro-blog'>" . $row['post'] . "</div>";
+      }
+      mysqli_close($connection);
       ?>
     </section>
   </div>

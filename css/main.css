@@ -19,3 +19,8 @@ button {
   background: darkslategray;
   color: #fff;
 }
+.micro-blog {
+  border: 1px solid black;
+  padding: 1em;
+  margin: 1em auto;
+}
