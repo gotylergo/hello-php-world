@@ -10,10 +10,7 @@
 
 <body>
   <div class="container">
-    <?php
-    $blog = $_POST['statusUpdate'];
-    ?>
-    <form action="index.php" method="post">
+    <form action="post.php" method="post">
       <label for="statusUpdate">What's on your mind?</label>
       <div class="form-group">
         <input type="text" name="statusUpdate"><button>post</button>
@@ -21,7 +18,7 @@
     </form>
     <section>
       <?php
-      echo $blog
+      // echo $blog
       ?>
     </section>
   </div>
